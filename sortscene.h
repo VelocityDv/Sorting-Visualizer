@@ -13,8 +13,11 @@ public:
 public slots:
     void step();
     void createBar(int height);
+    void shuffle();
 
 private:
+    void updatePosition(int index);
+
     QVector<QGraphicsRectItem*> rectangles;
 
     int maxHeight = 20;
