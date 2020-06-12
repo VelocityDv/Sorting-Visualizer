@@ -8,6 +8,9 @@ class InsertionSortScene : public SortScene
     Q_OBJECT
 public:
     InsertionSortScene();
+
+public slots:
+    void step();
 };
 
 #endif // INSERTIONSORTSCENE_H

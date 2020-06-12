@@ -13,10 +13,10 @@ public:
 public slots:
     void createBar(int height);
     void shuffle();
-    void step();
+    virtual void step();
     void swap(int first, int second);
 
-private:
+protected:
     void updatePosition(int index);
 
     QVector<QGraphicsRectItem*> rectangles;

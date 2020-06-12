@@ -17,8 +17,11 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+public slots:
+    void step();
+
 private:
     Ui::Widget *ui;
-    SortScene scene;
+    SortScene *scene;
 };
 #endif // WIDGET_H
