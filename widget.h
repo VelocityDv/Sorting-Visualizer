@@ -1,6 +1,8 @@
 #ifndef WIDGET_H
 #define WIDGET_H
 
+#include "sortscene.h"
+
 #include <QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -17,5 +19,6 @@ public:
 
 private:
     Ui::Widget *ui;
+    SortScene scene;
 };
 #endif // WIDGET_H
