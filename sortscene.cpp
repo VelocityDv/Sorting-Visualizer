@@ -12,12 +12,6 @@ SortScene::SortScene()
     }
 
     shuffle();
-
-    underline = addRect(
-        0, maxHeight * blockSize + 5, (blockSize * 2) + gapSize, 5,
-        //add custom bar
-        QPen(QColor(255, 0 , 0)), QBrush(QColor(255, 0, 0))
-    );
 }
 
 void SortScene::createBar(int height)
@@ -56,9 +50,6 @@ void SortScene::step()
 
     pos = (pos + 1) % (rectangles.size() - 1);
 
-    auto rectangle = underline->rect();
-    rectangle.moveLeft((blockSize + gapSize) * pos);
-    underline->setRect(rectangle);
 }
 
 void SortScene::swap(int first, int second)
