@@ -20,7 +20,6 @@ private:
     void updatePosition(int index);
 
     QVector<QGraphicsRectItem*> rectangles;
-    QGraphicsRectItem* underline;
 
     int maxHeight = 19;
     float blockSize = 50.0;
