@@ -51,11 +51,13 @@ void SortScene::step()
     rectangles[pos]->setBrush(QColor(255, 255, 255));
     rectangles[pos + 1]->setBrush(QColor(255, 255, 255));
 
-    pos = (pos + 1) % (rectangles.size() - 1);
+    pos = (pos + 1) % (rectangles.size() - 1 - sortedCount);
+    if(pos == 0){
+        ++sortedCount;
+    }
 
     rectangles[pos]->setBrush(QColor(255, 0, 0));
     rectangles[pos + 1]->setBrush(QColor(255, 0, 0));
-
 }
 
 void SortScene::swap(int first, int second)

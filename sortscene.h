@@ -26,6 +26,7 @@ private:
     float gapSize = 10.0;
 
     int pos = 0;
+    int sortedCount = 0;
 };
 
 #endif // SORTSCENE_H
