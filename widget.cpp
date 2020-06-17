@@ -1,12 +1,13 @@
 #include "widget.h"
 #include "ui_widget.h"
 
+#include "bubblesortscene.h"
 #include "insertionsortscene.h"
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
-    , scene(new InsertionSortScene())
+    , scene(new BubbleSortScene())
 {
     ui->setupUi(this);
     //new connect syntax Qt5, no longer pass a string

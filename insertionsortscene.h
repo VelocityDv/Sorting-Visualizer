@@ -10,7 +10,7 @@ public:
     InsertionSortScene();
 
 public slots:
-    void step();
+    void step() override;
     bool SortedSublist();
 };
 

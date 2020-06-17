@@ -16,12 +16,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bubblesortscene.cpp \
     insertionsortscene.cpp \
     main.cpp \
     sortscene.cpp \
     widget.cpp
 
 HEADERS += \
+    bubblesortscene.h \
     insertionsortscene.h \
     sortscene.h \
     widget.h
