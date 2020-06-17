@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>636</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,11 +19,22 @@
      <widget class="QGraphicsView" name="graphicsView"/>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_step">
-      <property name="text">
-       <string>Step</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_togglePlay">
+        <property name="text">
+         <string>Play</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_step">
+        <property name="text">
+         <string>Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -36,8 +47,26 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuAlgorithms">
+    <property name="title">
+     <string>Algorithms</string>
+    </property>
+    <addaction name="actionBubbleSort"/>
+    <addaction name="actionInsertionSort"/>
+   </widget>
+   <addaction name="menuAlgorithms"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBubbleSort">
+   <property name="text">
+    <string>Bubble Sort</string>
+   </property>
+  </action>
+  <action name="actionInsertionSort">
+   <property name="text">
+    <string>Insertion Sort</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

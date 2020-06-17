@@ -6,7 +6,7 @@
 #include <algorithm>
 
 SortScene::SortScene()
-{
+{            
     for(int i = 0; i < 19; ++i) {
         createBar(i % 19 + 1);
     }
@@ -45,6 +45,18 @@ void SortScene::updatePosition(int index)
 void SortScene::step()
 {
 
+}
+
+void SortScene::play(){
+    timer.start(delay);
+}
+
+void SortScene::pause(){
+    timer.stop();
+}
+
+bool SortScene::isPlaying(){
+    return timer.isActive();
 }
 
 void SortScene::swap(int first, int second)

@@ -4,6 +4,12 @@
 
 BubbleSortScene::BubbleSortScene()
 {
+
+    connect(
+        &timer, &QTimer::timeout,
+        this, &BubbleSortScene::step
+    );
+
     addText("Bubble Sort");
 }
 

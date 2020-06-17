@@ -6,7 +6,15 @@
 
 InsertionSortScene::InsertionSortScene()
 {
+
+    connect(
+        &timer, &QTimer::timeout,
+        this, &SortScene::step
+    );
+
     addText("Insertion Sort");
+
+
 }
 
 bool InsertionSortScene::SortedSublist(){

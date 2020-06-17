@@ -17,6 +17,11 @@ MainWindow::MainWindow(QWidget *parent) :
         this, &MainWindow::step
     );
 
+    connect(
+        ui->pushButton_togglePlay, &QPushButton::clicked,
+        this, &MainWindow::togglePlay
+    );
+
     ui->graphicsView->setScene(scene);
     ui->graphicsView->show();
 }
@@ -31,5 +36,15 @@ void MainWindow::step()
     scene->step();
 }
 
+void MainWindow::togglePlay()
+{
+    if(!scene->isPlaying()){
+        scene->play();
+        ui->pushButton_togglePlay->setText("Pause");
+    }else{
+        scene->pause();
+        ui->pushButton_togglePlay->setText("Play");
+    }
+}
 
 

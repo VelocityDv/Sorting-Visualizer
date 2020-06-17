@@ -18,6 +18,7 @@ public:
 
 public slots:
     void step();
+    void togglePlay();
 
 private:
     Ui::MainWindow *ui;
