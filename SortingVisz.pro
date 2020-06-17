@@ -20,19 +20,16 @@ SOURCES += \
     insertionsortscene.cpp \
     main.cpp \
     mainwindow.cpp \
-    sortscene.cpp \
-    widget.cpp
+    sortscene.cpp
 
 HEADERS += \
     bubblesortscene.h \
     insertionsortscene.h \
     mainwindow.h \
-    sortscene.h \
-    widget.h
+    sortscene.h
 
 FORMS += \
-    mainwindow.ui \
-    widget.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
