@@ -26,6 +26,7 @@ protected:
     float gapSize = 10.0;
 
     int pos = 0;
+    int pos_sortedsublist = 0;
     int sortedCount = 0;
 };
 

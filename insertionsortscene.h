@@ -11,6 +11,7 @@ public:
 
 public slots:
     void step();
+    bool SortedSublist();
 };
 
 #endif // INSERTIONSORTSCENE_H
