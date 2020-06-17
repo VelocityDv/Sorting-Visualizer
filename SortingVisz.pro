@@ -19,16 +19,19 @@ SOURCES += \
     bubblesortscene.cpp \
     insertionsortscene.cpp \
     main.cpp \
+    mainwindow.cpp \
     sortscene.cpp \
     widget.cpp
 
 HEADERS += \
     bubblesortscene.h \
     insertionsortscene.h \
+    mainwindow.h \
     sortscene.h \
     widget.h
 
 FORMS += \
+    mainwindow.ui \
     widget.ui
 
 # Default rules for deployment.
