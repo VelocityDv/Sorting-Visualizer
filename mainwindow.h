@@ -16,13 +16,17 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    template<class T>
+    void setupScene();
+
 public slots:
     void step();
     void togglePlay();
+    void selectAlgorithm(int index);
 
 private:
     Ui::MainWindow *ui;
-    SortScene *scene;
+    std::unique_ptr<SortScene> scene;
 };
 
 #endif // MAINWINDOW_H

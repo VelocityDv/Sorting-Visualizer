@@ -22,8 +22,12 @@ MainWindow::MainWindow(QWidget *parent) :
         this, &MainWindow::togglePlay
     );
 
-    ui->graphicsView->setScene(scene);
-    ui->graphicsView->show();
+    connect(
+        ui->dropBox_algorithmSelector, QOverload<int>::of(&QComboBox::activated),
+        this, &MainWindow::selectAlgorithm
+    );
+
+    setupScene<BubbleSortScene> ();
 }
 
 MainWindow::~MainWindow()
@@ -47,4 +51,18 @@ void MainWindow::togglePlay()
     }
 }
 
+void MainWindow::selectAlgorithm(int index)
+{
+    if(index == 0)
+        setupScene<BubbleSortScene> ();
+    else if(index == 1)
+        setupScene<InsertionSortScene> ();
+}
 
+template<class T>
+void MainWindow::setupScene()
+{
+    scene.reset();
+    scene = std::make_unique<T> ();
+    ui->graphicsView->setScene(scene.get());
+}

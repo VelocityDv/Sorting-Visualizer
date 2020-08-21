@@ -16,6 +16,20 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QComboBox" name="dropBox_algorithmSelector">
+      <item>
+       <property name="text">
+        <string>Bubble Sort</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Insertion Sort</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
      <widget class="QGraphicsView" name="graphicsView"/>
     </item>
     <item>
@@ -37,24 +51,6 @@
      </layout>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuAlgorithms">
-    <property name="title">
-     <string>Algorithms</string>
-    </property>
-    <addaction name="actionBubbleSort"/>
-    <addaction name="actionInsertionSort"/>
-   </widget>
-   <addaction name="menuAlgorithms"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionBubbleSort">
